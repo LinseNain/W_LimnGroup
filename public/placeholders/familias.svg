@@ -1,0 +1,10 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de una familia en un hogar limpio y seguro">
+  <rect width="800" height="800" fill="#207178"/>
+  <circle cx="300" cy="320" r="70" fill="#ffffff"/>
+  <rect x="230" y="400" width="140" height="180" rx="30" fill="#ffffff"/>
+  <circle cx="480" cy="350" r="55" fill="#fffb0a"/>
+  <rect x="425" y="410" width="110" height="150" rx="25" fill="#fffb0a"/>
+  <ellipse cx="600" cy="560" rx="60" ry="34" fill="#ffffff"/>
+  <circle cx="650" cy="530" r="22" fill="#ffffff"/>
+  <rect x="120" y="620" width="560" height="20" rx="10" fill="#164f54"/>
+</svg>
