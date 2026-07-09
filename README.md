@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LimnGroup
 
-## Getting Started
+Web de LimnGroup, servicio de limpieza profesional en El Casar de Guadalajara. Next.js 15 (App Router) + TypeScript + Tailwind CSS v4 + Framer Motion. Formulario de contacto sin base de datos: Server Action con Zod, Resend y Cloudflare Turnstile.
 
-First, run the development server:
+## Desarrollo
 
 ```bash
+npm install
+cp .env.example .env.local   # rellena las claves
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Antes de publicar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Estos datos son placeholders y deben sustituirse:
 
-## Learn More
+- **`src/lib/site-config.ts`** — nombre del titular, email, dominio, número de WhatsApp, URL de Facebook y URL de producción.
+- **`.env.local`** — `RESEND_API_KEY`, `RESEND_FROM_EMAIL` (requiere dominio verificado en Resend), `CONTACT_TO_EMAIL`, `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`.
+- Imágenes de `public/placeholders/` — sustituir por fotografías reales del servicio.
+- `src/app/layout.tsx` — imagen Open Graph (`/og-image.jpg`, aún no incluida).
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` — servidor de desarrollo
+- `npm run build` — build de producción
+- `npm run start` — sirve el build de producción
+- `npm run lint` — ESLint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estructura
 
-## Deploy on Vercel
+- `src/app/page.tsx` — landing (una sola página, scroll)
+- `src/app/privacidad/page.tsx` — política de privacidad (RGPD)
+- `src/app/actions/contact.ts` — Server Action del formulario de contacto
+- `src/components/` — secciones de la landing y componentes `ui/` (shadcn-style)
+- `src/lib/site-config.ts` — datos de contacto centralizados
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sin base de datos, sin analítica de terceros, sin banner de cookies (no hay cookies de terceros).

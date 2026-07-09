@@ -35,7 +35,7 @@ export default function PrivacidadPage() {
                 El responsable del tratamiento de los datos personales
                 recogidos a través de este sitio web es {siteConfig.ownerName},
                 persona física sin actividad económica registrada, con
-                domicilio en {siteConfig.location}, España. LimnGroup es el
+                domicilio en {siteConfig.location}. LimnGroup es el
                 nombre bajo el que {siteConfig.ownerName} ofrece de forma
                 informal el servicio de limpieza descrito en esta web.
               </p>
